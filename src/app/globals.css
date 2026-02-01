@@ -1,20 +1,21 @@
 :root {
-  --background: #fafafa;
+  --background: #F1F5F9;
   --foreground: #000000;
-  --header-bg: #515151; /* #676464 in some parts, #515151 in container */
+  --header-bg: #515151;
+  /* #676464 in some parts, #515151 in container */
   --sidebar-bg: #ffffff;
   --sidebar-border: #e9eff5;
   --card-bg: #ffffff;
   --card-border: rgba(255, 255, 255, 0.5);
-  
+
   --primary-blue: #007c9e;
   --primary-yellow: #eec920;
   --primary-green: #8bada9;
-  
+
   --text-primary: #000000;
   --text-secondary: #616161;
   --text-placeholder: #dddddd;
-  
+
   --nav-selected-bg: #e5f4f2;
   --nav-selected-border: #00a7c4;
 }
@@ -36,13 +37,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
