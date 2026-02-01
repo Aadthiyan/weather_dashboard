@@ -21,7 +21,7 @@ This is the Historical Weather Data Dashboard "Overview Page" implementation.
    npm run dev
    ```
 
-3. Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
+3. Open [https://weather-dashboard-rosy-eight.vercel.app/](https://weather-dashboard-rosy-eight.vercel.app/) to view the dashboard.
 
 ## Project Structure
 - `src/app/page.tsx`: Main Overview page.
