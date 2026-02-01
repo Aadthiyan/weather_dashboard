@@ -1,0 +1,137 @@
+.container {
+    position: relative;
+    font-family: var(--font-inter);
+}
+
+.trigger {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 240px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.trigger:hover {
+    background-color: #fafafa;
+}
+
+.popup {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid #F0F0F0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: 100;
+    display: flex;
+    padding: 24px;
+    gap: 32px;
+}
+
+.calendarCol {
+    width: 240px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.monthTitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #404040;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #A3A3A3;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.navButton:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.dayLabel {
+    font-size: 12px;
+    color: #737373;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #404040;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.cell:hover {
+    background-color: #F5F5F5;
+}
+
+.selected {
+    background-color: #00A7C4;
+    color: #FFFFFF;
+}
+
+.inRange {
+    background-color: #ECF5F6;
+    border-radius: 0;
+}
+
+.rangeStart {
+    background-color: #00A7C4;
+    color: #FFF;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.rangeEnd {
+    background-color: #00A7C4;
+    color: #FFF;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.dayNumber {
+    z-index: 5;
+}

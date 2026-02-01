@@ -1,0 +1,83 @@
+.container {
+    position: relative;
+    font-family: var(--font-inter);
+    z-index: 50;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 4px 8px;
+    /* Minimal padding for the trigger text itself if it's just text in the header */
+}
+
+/* If the trigger is the card header action, it might need to look like a button or just text. 
+   In the screenshot, when closed, it looks like just a header? 
+   No, the screenshot shows the *OPEN* state. 
+   Let's assume the closed state is similar to the top row of the open state. */
+
+.selectedText {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    color: #00A7C4;
+    /* Cyan arrow */
+    transition: transform 0.2s ease;
+}
+
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: -12px;
+    /* Pull it up to cover the original header position or slightly above */
+    right: -12px;
+    /* Expand slightly wider? */
+    left: -12px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 16px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Spacing between items */
+}
+
+.option {
+    font-size: 15px;
+    color: #8C8C8C;
+    /* Gray for unselected */
+    cursor: pointer;
+    transition: color 0.1s;
+    padding: 4px 0;
+}
+
+.option:hover {
+    color: #404040;
+}
+
+.optionSelected {
+    font-size: 16px;
+    /* Header Title size */
+    font-weight: 600;
+    color: #000000;
+}
+
+/* The item in the list that is currently selected */
+.activeItem {
+    color: #00A7C4 !important;
+    /* Cyan for the selected item in the list */
+    font-weight: 500;
+}

@@ -1,0 +1,49 @@
+.container {
+  padding: 32px 40px;
+  max-width: 1600px;
+}
+
+.title {
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #000000;
+}
+
+.filterRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.dropdown {
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+}
+
+.dropdownIcon {
+  margin-left: 12px;
+  color: #000000;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 24px;
+}
+
+/* Specific adjustments to match the screenshot layout where windspeed is on the second row left */
+.chartsGrid>div {
+  /* Default behavior fits the grid */
+}

@@ -1,0 +1,43 @@
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 340px;
+    min-height: 340px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.03);
+    /* Softer shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 40px;
+}
+
+.titleGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+}
+
+.action {
+    /* Container for right-side action slot */
+}
