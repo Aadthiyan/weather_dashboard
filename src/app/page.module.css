@@ -39,11 +39,15 @@
 
 .chartsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 340px 340px;
   gap: 24px;
 }
 
-/* Specific adjustments to match the screenshot layout where windspeed is on the second row left */
-.chartsGrid>div {
-  /* Default behavior fits the grid */
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 340px);
+  }
 }

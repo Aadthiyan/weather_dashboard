@@ -20,7 +20,7 @@ export default function ChartCard({ title, icon, children, className, action, on
                 </div>
                 {action && <div className={styles.action}>{action}</div>}
             </div>
-            <div style={{ flex: 1, minHeight: 0 }}>
+            <div style={{ height: '240px', minHeight: 0 }}>
                 {children}
             </div>
         </div>
