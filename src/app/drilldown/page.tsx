@@ -81,20 +81,21 @@ function DrilldownContent() {
     const getChartParams = (metric: MetricType) => {
         let color = '#000000';
         let unit = '';
+        let chartType: 'line' | 'bar' = 'line';
 
         switch (metric) {
-            case 'Temperature': color = '#EEC920'; unit = '°C'; break;
-            case 'Precipitation': color = '#007C9E'; unit = 'mm'; break;
-            case 'Wind Speed': color = '#8BADA9'; unit = 'km/h'; break;
-            case 'Relative Humidity': color = '#00CED1'; unit = '%'; break;
-            case 'Apparent Temperature': color = '#FF7F50'; unit = '°C'; break;
-            case 'Sea Level Pressure': color = '#9370DB'; unit = 'hPa'; break;
+            case 'Temperature': color = '#EEC920'; unit = '°C'; chartType = 'line'; break;
+            case 'Precipitation': color = '#007C9E'; unit = 'mm'; chartType = 'bar'; break;
+            case 'Wind Speed': color = '#8BADA9'; unit = 'km/h'; chartType = 'line'; break;
+            case 'Relative Humidity': color = '#00CED1'; unit = '%'; chartType = 'line'; break;
+            case 'Apparent Temperature': color = '#FF7F50'; unit = '°C'; chartType = 'line'; break;
+            case 'Sea Level Pressure': color = '#9370DB'; unit = 'hPa'; chartType = 'line'; break;
         }
 
-        return { color, unit };
+        return { color, unit, chartType };
     };
 
-    const { color, unit } = getChartParams(selectedMetric);
+    const { color, unit, chartType } = getChartParams(selectedMetric);
 
     const getIcon = (metric: MetricType) => {
         switch (metric) {
@@ -142,6 +143,7 @@ function DrilldownContent() {
                             multiSeries={locations}
                             stroke={color}
                             unit={unit}
+                            chartType={chartType}
                         />
                     )}
                 </ChartCard>
